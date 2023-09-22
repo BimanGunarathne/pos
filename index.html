@@ -11,7 +11,7 @@
 <body>
 <!--start login process-->
 
-<div class="container">
+<div class="container" id="login-context">
     <div class="login-main-outer">
         <div class="login-inner">
             <h2 class="login-text">Login</h2>
@@ -33,7 +33,7 @@
                 <div class="col-12">
                     <br>
                     <div class="form-group">
-                        <input type="button" value="Login" class="btn btn-primary" style="width: 100%!important;">
+                        <input type="button" value="Login" onclick="clearAndLoad('sd')" class="btn btn-primary" style="width: 100%!important;">
                     </div>
                 </div>
                 <hr>
@@ -53,7 +53,7 @@
 
 <!--start register process-->
 
-<div class="container">
+<div class="container" id="register-context">
     <div class="login-main-outer">
         <div class="login-inner">
             <h2 class="login-text">Signup</h2>
@@ -101,5 +101,6 @@
 <!--end register process-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
