@@ -5,7 +5,6 @@ class User{
         this.password=password;
     }
 }
-
 class Customer{
     constructor(name,address,salary,nic) {
         this.name=name;
@@ -14,12 +13,10 @@ class Customer{
         this.nic=nic;
     }
 }
-
 let userArr=[];
 let customerArr=[];
 /*=======User Management*/
 const createUser=()=>{
-
     const fullName=$('#fullName').val();
     const email=$('#register-email').val();
     const password=$('#register-password').val();
@@ -35,7 +32,6 @@ const createUser=()=>{
     userArr.push(createdUser);
     console.log(userArr);
 }
-
 const login = ()=>{
     const email=$('#email').val();
     const password=$('#password').val();
@@ -52,9 +48,7 @@ const login = ()=>{
     }
 }
 //
-
 /*Customer*/
-
 const createCustomer=()=>{
     const customer = new Customer(
         $('#name').val(),
@@ -94,5 +88,4 @@ const getAllCustomers=()=>{}
 
 /*Customer*/
 const clearAndLoad=(element)=>{
-
 }
