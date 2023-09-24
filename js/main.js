@@ -70,8 +70,25 @@ const createCustomer=()=>{
     }
     customerArr.push(customer);
 }
-const findCustomer=(id)=>{}
-const updateCustomer=(id)=>{}
+const findCustomer=(id)=>{
+    // promise
+    let selectedCustomer = customerArr.find(e=>e.id===id);
+    if(selectedCustomer){
+        return selectedCustomer;
+    }
+    return null;
+}
+const updateCustomer=(id)=>{
+    let customer=findCustomer(id);
+    if(customer){
+        $('#name').val(customer.name);
+        $('#address').val(customer.address);
+        parseFloat($('#salary').val(customer.salary));
+        $('#nic').val(customer.nic);
+    }else {
+        alert('Customer not found!');
+    }
+}
 const deleteCustomer=(id)=>{}
 const getAllCustomers=()=>{}
 
