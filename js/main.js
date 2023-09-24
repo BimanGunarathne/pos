@@ -92,7 +92,19 @@ const deleteCustomer=(id)=>{
         }
     }
 }
-const getAllCustomers=()=>{}
+const getAllCustomers=()=>{
+    let tBody = $('tbody');
+    $.each(customerArr,function (i,item) {
+        let row = $('<tr>');
+        let colName = $('<td>').text(item,name);
+        let colAddress = $('<td>').text(item,address);
+        let colSalary = $('<td>').text(item,salary);
+        let colNic = $('<td>').text(item,nic);
+
+        row.append(colName,colAddress,colSalary,colNic);
+        tBody.append(row)
+    })
+}
 
 /*Customer*/
 const clearAndLoad=(element)=>{
