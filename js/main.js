@@ -6,7 +6,17 @@ class User{
     }
 }
 
+class Customer{
+    constructor(name,address,salary,nic) {
+        this.name=name;
+        this.address=address;
+        this.salary=salary;
+        this.nic=nic;
+    }
+}
+
 let userArr=[];
+let customerArr=[];
 /*=======User Management*/
 const createUser=()=>{
 
@@ -42,6 +52,30 @@ const login = ()=>{
     }
 }
 //
+
+/*Customer*/
+
+const createCustomer=()=>{
+    const customer = new Customer(
+        $('#name').val(),
+        $('#address').val(),
+        parseFloat($('#salary').val()),
+        $('#nic').val()
+    );
+
+    let existsData = customerArr.find(e=>e.nic===customer.nic);
+    if(existsData){
+        alert('Customer NIC already exists!');
+        return;
+    }
+    customerArr.push(customer);
+}
+const findCustomer=(id)=>{}
+const updateCustomer=(id)=>{}
+const deleteCustomer=(id)=>{}
+const getAllCustomers=()=>{}
+
+/*Customer*/
 const clearAndLoad=(element)=>{
 
 }
