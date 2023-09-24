@@ -83,7 +83,15 @@ const updateCustomer=(id)=>{
         alert('Customer not found!');
     }
 }
-const deleteCustomer=(id)=>{}
+const deleteCustomer=(id)=>{
+    for (let i = 0; i < customerArr.length; i++) {
+        if (customerArr[i].id === id) {
+            customerArr.splice(i, 1);
+            alert('Customer deleted!');
+            return;
+        }
+    }
+}
 const getAllCustomers=()=>{}
 
 /*Customer*/
